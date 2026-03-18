@@ -3,67 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formatações de Texto em HTML</title>
-  <style>
-    body {
-      background-color: #f0f8ff;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-    }
-
-    h1 {
-      color: darkblue;
-      text-align: center;
-      font-family: Georgia, serif;
-    }
-
-    .container {
-      background-color: white;
-      padding: 20px;
-      border-radius: 10px;
-      width: 80%;
-      margin: auto;
-      box-shadow: 0 0 10px gray;
-    }
-
-    p {
-      font-size: 20px;
-      margin: 15px 0;
-    }
-
-    .fonte1 { font-family: Verdana, sans-serif; color: darkred; }
-    .fonte2 { font-family: "Courier New", monospace; color: darkgreen; }
-    .fonte3 { font-family: Georgia, serif; color: purple; }
-    .fonte4 { font-family: Tahoma, sans-serif; color: chocolate; }
-  </style>
+  <title>Restaurante Italiano - Sobre</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <div class="container">
-    <h1>Exemplo de Formatações em HTML</h1>
+    <div class="topo-links">
+      <a href="sobre.html">sobre</a>
+      <a href="contato.html">contato</a>
+    </div>
+    <table>
+  <tr>
+    <td><img class="imagem-massa" src="imagens/massa1.avif" alt="Prato de massa italiana" width="300"></td>
+    <td><strong><h3>Essa é a 1ª linha e coluna 2ª</h3></strong></td>
+  </tr>
+  <tr>
+    <h1></h1><td><strong></strong><h3>Essa é a 2ª linha e coluna 1ª</h3><strong></strong></td><h1></h1>
+    <td><img class="imagem-massa" src="imagens/massa1.avif" alt="Prato de massa italiana" width="300"></td>
+  </tr>
+</table>
 
-    <p class="fonte1"><b>Texto em negrito com a tag b</b></p>
-
-    <p class="fonte2"><strong>Texto importante com a tag strong</strong></p>
-
-    <p class="fonte3"><i>Texto em itálico com a tag i</i></p>
-
-    <p class="fonte4"><em>Texto enfatizado com a tag em</em></p>
-
-    <p class="fonte1"><mark>Texto marcado com a tag mark</mark></p>
-
-    <p class="fonte2"><small>Texto menor com a tag small</small></p>
-
-    <p class="fonte3"><del>Texto removido com a tag del</del></p>
-
-    <p class="fonte4"><ins>Texto inserido com a tag ins</ins></p>
-
-    <p class="fonte1">Fórmula da água: H<sub>2</sub>O usando a tag sub</p>
-
-    <p class="fonte2">Potência: 10<sup>2</sup> usando a tag sup</p>
+    <div class="hero">
+      <h1>Bem vindo ao restaurante Italiano</h1>
+      <p>escolha nossas melhores massas</p>
+      <img class="imagem-massa" src="imagens/massa1.avif" alt="Prato de massa italiana">
+    </div>
   </div>
-  </body>
-  <img src="image.png" alt="Modelo" style="display:block; margin:10mm auto; border:3px solid #000; border-radius:8px;">
 </body>
 </html>

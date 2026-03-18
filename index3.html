@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Wireframe - Cantina Bella</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #f4f1ec;
+      color: #2c2c2c;
+    }
+
+    .box {
+      border: 1px solid #8b7d6b;
+      background: #e6dfd6; /* tom mais escuro interno */
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+    }
+
+    nav {
+      background: #3a2f28;
+      padding: 10px;
+      border-radius: 6px;
+    }
+
+    nav a {
+      color: #f4f1ec;
+      margin-right: 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    h1, h2 {
+      margin-top: 0;
+      color: #3a2f28;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <nav>
+      <a href="#home">Início</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </div>
+
+  <div id="content"></div>
+
+  <script>
+    function render() {
+      const hash = window.location.hash || '#home';
+      const content = document.getElementById('content');
+
+      if (hash === '#sobre') {
+        content.innerHTML = `
+          <div class="box">
+            <h1>[ SOBRE ]</h1>
+            <p>Restaurante italiano tradicional.</p>
+            <p>Foco em receitas clássicas e ambiente familiar.</p>
+          </div>
+        `;
+      } else if (hash === '#contato') {
+        content.innerHTML = `
+          <div class="box">
+            <h1>[ CONTATO ]</h1>
+            <p>Telefone: (43) 3333-0000</p>
+            <p>E-mail: contato@cantinabella.com</p>
+            <p>Endereço: Rua das Flores, 100</p>
+          </div>
+        `;
+      } else {
+        content.innerHTML = `
+          <div class="box">
+            <h1>CANTINA BELLA</h1>
+            <p>Comida italiana simples e bem feita.</p>
+          </div>
+
+          <div class="box">
+            <h2>DESTAQUES</h2>
+            <ul>
+              <li>Pizza</li>
+              <li>Lasanha</li>
+              <li>Ravioli</li>
+            </ul>
+          </div>
+
+          <div style="display:flex; gap:20px; flex-wrap:wrap;">
+
+          <div class="box" style="width:250px;">
+            <h3>Pizza</h3>
+            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=400&q=80" width="100%">
+          </div>
+
+          <div class="box" style="width:250px;">
+            <h3>Lasanha</h3>
+            <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=400&q=80" width="100%">
+          </div>
+
+          <div class="box" style="width:250px;">
+            <h3>Ravioli</h3>
+            <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=400&q=80" width="100%">
+          </div>
+
+          </div>
+
+          <div class="box">
+            <h2>INFORMAÇÕES</h2>
+            <p>Telefone | E-mail | Endereço</p>
+          </div>
+        `;
+      }
+    }
+
+    window.addEventListener('hashchange', render);
+    render();
+  </script>
+
+</body>
+</html>
